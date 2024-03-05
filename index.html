@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .con{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 5px;
+            align-items: center;
+            justify-content: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <p>Number Guessing game</p>
+        <input type="text" placeholder="Enter a number" id="tf">
+        <button onclick="fun()">Check</button>
+        <div></div>
+        <div></div>
+    </div>
+    <script>
+        let r=Math.round(Math.random()*100)
+        console.log(r)
+        let a=[]
+        
+       function fun() {
+        
+        if(r==tf.value)
+        {
+            console.log(document.getElementsByTagName("div")[2].innerHTML="your gusse is right")
+            a.push(tf.value)
+        }
+        else if (tf.value>r) {
+            console.log(document.getElementsByTagName("div")[2].innerHTML="your gussed is so high")
+            a.push(tf.value)
+        } 
+        else {
+            console.log(document.getElementsByTagName("div")[2].innerHTML="your gussed is so low") 
+            a.push(tf.value)
+        }
+        console.log(document.getElementsByTagName("div")[1].innerHTML="your gessed numbers are"+a)
+        }
+
+    
+    </script>
+    
+</body>
+</html>
